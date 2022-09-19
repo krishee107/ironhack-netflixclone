@@ -38,7 +38,7 @@ nav {
 #idioma {
     background: none;
     border: 1px solid white;
-    padding: 10px;
+    padding: 7px;
     color: white;
 }#idioma option::before {
     content: "f0ac";
