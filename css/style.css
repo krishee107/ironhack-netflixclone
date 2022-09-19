@@ -1,0 +1,258 @@
+@font-face {
+    font-family: "Netflix";
+    src: url("../fonts/netflix/NetflixSans-Medium.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Helvetica";
+    src: url("..\fonts\Helvetica-Neue-Font\Helvetica Neue Medium Extended\Helvetica Neue Medium Extended.ttf") format("ttf");
+  }
+
+/* GENERAL */
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("/img/background.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    font-family: 'Helvetica';
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+
+#logo img {
+    width: 13em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+#idioma {
+    background: none;
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+}#idioma option::before {
+    content: "f0ac";
+    background: white;
+}
+
+#iniciarSesion {
+    background-color: #e50914;
+    float: right;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    padding: 7px 17px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Main */
+main {
+    max-width: 650px;
+    margin: 0 auto;
+    display: grid;
+    padding: 10% 0 15%;
+    gap: 10%;
+}
+
+h1, h2, h3 {
+    color: white;
+    justify-self: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Netflix';
+}h2 {
+    font-size: 1.625rem;
+}h3 {
+    font-size: 1.2rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}input {
+    height: 70px;
+    min-width: 500px;
+    font-size: 17px;
+    padding: 0 5px;
+}#empezar {
+    background: #f40612;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+    height: 100%;
+    color: white;
+    border-left: 1px solid #333;
+    font-size: 1.5em;
+    line-height: 3em;
+    text-align: center;
+}
+
+/* Cards*/
+section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    font-family: 'Helvetica';
+    border-bottom: 8px solid #222;
+    padding: 2% 5%;
+}.tituloCard {
+    font-size: 3.125rem;
+    text-align: start;
+}.textCard {
+    font-size: 1.625rem;
+    text-align: start;
+    padding: 4% 0;
+}
+
+#disfruta {
+    border-top: 8px solid #222;
+}
+/* Video*/
+
+#introNetflix video {
+    left: 46.5%;
+    max-height: 54%;
+    position: absolute;
+    top: 48%;
+    transform: translate(-50%,-50%);
+}
+
+.cardImg {
+    position: relative;
+}.cardImg img {
+    z-index: 2;
+}
+#moverse video {
+    top: 8%;
+    left: 10%;
+    display: none;
+}
+
+/* Faq */
+#faq {
+    color: white;
+    justify-content: center;
+    display: grid;
+    gap: 20px;
+    padding: 3% 0;
+    width: 100%;
+    border-bottom: 8px solid #222;
+}
+#faq h1 {
+    font-size: 2.5em;
+}
+#faqList {
+    font-size: 25px;
+    display: grid;
+    gap: 7px;
+    min-width: 700px;
+}
+
+.faqQuestion {
+    background: #303030;
+    padding: 0.8em 2.2em 0.8em 1.2em;
+}
+
+/* Reactivar */
+#reactivar {
+    display: grid;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+/* Footer */
+footer {
+    color: #737373;
+    width: 60%;
+    margin: 0 auto;
+    padding: 4%;
+}
+#llama {
+    padding: 10px;
+}
+#footerMenu {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    font-size: 13px;
+    padding: 10px;
+}
+.footerColumn li {
+    padding: 10px;
+}
+footer select {
+    width: fit-content;
+    color: #737373 !important;
+    border-color: #737373 !important;
+    margin: 2%;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: unset;
+    }
+    
+    #logo img {
+        width: 8em;
+    }
+    
+    #iniciarSesion {
+        padding: 10px;
+    }
+    main {
+        width: 95%;
+        padding: 10% 0;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+    font-size: 1.3em;
+    }h3 {
+    font-size: 1em;
+    }
+
+    form {
+        grid-template-columns: unset;
+        gap: 15px;
+    }    input {
+        min-width: unset;
+        height: 50px;
+    }
+    
+    #empezar {
+        font-size: 1em;
+        width: fit-content;
+        justify-self: center;
+        padding: 0px 10px;
+        border-radius: 5px;
+    }
+
+    section {
+        display: none;
+    }
+    #faqList {
+        min-width: unset;
+    }
+    
+    footer {
+        width: unset;
+    }
+  }
+
